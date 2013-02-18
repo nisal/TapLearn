@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="ladybugThumb.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="yaa-QV-g3u">
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="328" id="HCx-p7-ui3"/>
+                                    <constraint firstAttribute="height" constant="210" id="boa-MY-lAz"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ehE-9a-Ocf" appends="YES" id="SPj-yF-9ax"/>
+                                    <outletCollection property="gestureRecognizers" destination="anm-8T-lEP" appends="YES" id="ZwY-3u-5T2"/>
+                                    <outletCollection property="gestureRecognizers" destination="sdd-r6-3VQ" appends="YES" id="Lps-O2-y31"/>
+                                    <outletCollection property="gestureRecognizers" destination="DsX-9M-3x0" appends="YES" id="6bP-WI-5wW"/>
+                                    <outletCollection property="gestureRecognizers" destination="xao-tG-g5a" appends="YES" id="gU5-kh-GEq"/>
+                                    <outletCollection property="gestureRecognizers" destination="KnB-7i-bCL" appends="YES" id="Zof-0T-iYH"/>
+                                    <outletCollection property="gestureRecognizers" destination="gYp-hI-bFl" appends="YES" id="MfL-hF-QnG"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWL-W7-Kgx">
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bpk-pi-tzs" appends="YES" id="7qc-Jd-vy1"/>
+                                    <outletCollection property="gestureRecognizers" destination="JLx-7s-cgS" appends="YES" id="UDb-w9-BcN"/>
+                                </connections>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yaa-QV-g3u" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="PrT-J8-QPb"/>
+                            <constraint firstItem="yaa-QV-g3u" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="dXc-zM-3GK"/>
+                            <constraint firstItem="FWL-W7-Kgx" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="92" id="lFe-LX-uIe"/>
+                            <constraint firstItem="FWL-W7-Kgx" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="pQ0-ig-O7t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myLabel" destination="FWL-W7-Kgx" id="cPP-FK-HLg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ehE-9a-Ocf">
+                    <connections>
+                        <action selector="myTapGesture:" destination="2" id="7kA-kM-dfQ"/>
+                        <outlet property="delegate" destination="2" id="abR-zO-IJk"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pinchGestureRecognizer id="anm-8T-lEP">
+                    <connections>
+                        <action selector="myPincher:" destination="2" id="XzU-DO-sAX"/>
+                        <outlet property="delegate" destination="2" id="9uf-L5-qK4"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="sdd-r6-3VQ">
+                    <connections>
+                        <action selector="myRotator:" destination="2" id="1MW-9i-TeJ"/>
+                        <outlet property="delegate" destination="2" id="bXC-H7-x8J"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <swipeGestureRecognizer cancelsTouchesInView="NO" direction="up" id="DsX-9M-3x0">
+                    <connections>
+                        <action selector="mySwipeUp:" destination="2" id="v01-Ej-WTK"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer cancelsTouchesInView="NO" direction="down" id="xao-tG-g5a">
+                    <connections>
+                        <action selector="mySwipeDn:" destination="2" id="I8O-zJ-Zfr"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="KnB-7i-bCL">
+                    <connections>
+                        <action selector="mySwipeLt:" destination="2" id="1Bh-Pd-Fiv"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="gYp-hI-bFl">
+                    <connections>
+                        <action selector="mySwipeRt:" destination="2" id="rzi-Kn-qzU"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <panGestureRecognizer cancelsTouchesInView="NO" minimumNumberOfTouches="1" id="bpk-pi-tzs">
+                    <connections>
+                        <action selector="myPan:" destination="2" id="urG-tl-geZ"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pongPressGestureRecognizer cancelsTouchesInView="NO" allowableMovement="10" minimumPressDuration="0.5" id="JLx-7s-cgS">
+                    <connections>
+                        <action selector="myLongPresser:" destination="2" id="vtJ-GR-Y8y"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ladybugThumb.jpg" width="44" height="44"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="myLongPresser:" candidateClass="UILongPressGestureRecognizer"/>
+                <relationship kind="action" name="myPan:" candidateClass="UIPanGestureRecognizer"/>
+                <relationship kind="action" name="myPincher:" candidateClass="UIPinchGestureRecognizer"/>
+                <relationship kind="action" name="myRotator:" candidateClass="UIRotationGestureRecognizer"/>
+                <relationship kind="action" name="mySwipeDn:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="mySwipeLt:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="mySwipeRt:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="mySwipeUp:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="action" name="myTapGesture:" candidateClass="UIGestureRecognizer"/>
+                <relationship kind="outlet" name="myLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
